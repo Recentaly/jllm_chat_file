@@ -116,7 +116,6 @@ def verify_mail(html_string: str) -> None:
     chrome_options.headless = True
     driver = webdriver.Chrome(options=chrome_options)  # You can use another browser driver if needed
     driver.get("about:blank")  # Open a blank page first to prevent "data:" issue
-    print(confirmation_link)
     driver.get(confirmation_link)
 
     print("Email verified successfully!")
