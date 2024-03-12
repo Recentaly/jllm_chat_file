@@ -181,16 +181,11 @@ register(email=email, password="cheese123")
 # wait for an email by JanitorAI
 msg = get_message(email)
 
-# print the email once it is received
-print(msg)
-
 # verify the email
 verify_mail(msg)
 
 # create an API object. This automatically gets the JWT token for the user so we don't have to call the __get_jwt__ function
 api = API(email, "cheese123")
-
-os.system("cls" if os.name == 'nt' else "clear")
 
 # generate a response
 for chunk in api.generate([
